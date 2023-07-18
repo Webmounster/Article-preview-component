@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    --ff-Manrope: 'Manrope', sans-serif;
+
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-Manrope);
+    font-size: 13px;
+    font-weight: 500;
+    background-color: var(--LightGrayishBlue);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 326px;
+    height: 506px;
+    margin: 72px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* ########################## SECTION 1 ################################ */
+
+.section1 {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.section1__image {
+    width: 326px;
+    height: 212px;
+    background-image: url(../images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ########################## SECTION 2 ################################ */
+
+.section2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 36px 0px;
+}
+
+.section2__h1 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.section2__parrafo {
+    font-size: 0.8rem;
+    word-break: break-word;
+    color: var(--DesaturatedDarkBlue);
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.section2__perfil {
+    width: 100%;
+    height: 65px;
+    position: relative;
+    display: flex;
+    justify-items: stretch;
+    align-items: center;
+    gap: 15px;
+}
+
+.section2__perfil--image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.section2__datos--date {
+    color: var(--GrayishBlue);
+}
+.section2__btn {
+    position: absolute;
+    top: 12px;
+    right: -20px;
+    cursor: pointer;
+    text-align: end;
+    padding-right: 10px;
+    flex-grow: 1;
+    justify-self: flex-end;
+    z-index: 1000;
+}
+
+.fondo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--LightGrayishBlue);
+    border-radius: 50%;
+}
+.img-myshare {
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ########################## SECTION 3 ################################ */
+
+.section3__share {
+    width: 326px;
+    background-color: var(--VeryDarkGrayishBlue);
+    position: absolute;
+    bottom: -80px;
+    z-index: 100;
+    display: flex;
+    align-content: center;
+    gap: 15px;
+    padding: 22px 28px;
+}
+
+.section3__share--parrafo {
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+    letter-spacing: 5px;
+}
+
+.section3__redes {
+    display: flex;
+    gap: 15px;
+    align-content: center;
+}
+.section3__redes--iconos {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* ########################## ANIMATIONS ################################ */
+
+@keyframes share-normal {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-80px);
+    }
+}
+@keyframes share-reverse {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes colorBtn-normal {
+    0% {
+        background-color: var(--LightGrayishBlue);
+    }
+    100% {
+        background-color: var(--GrayishBlue);
+    }
+}
+@keyframes colorBtn-reverse {
+    0% {
+        background-color: var(--GrayishBlue);
+    }
+    100% {
+        background-color: var(--LightGrayishBlue);
+    }
+}
+
+/* ----------------------- FOOTER ------------------- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ########################## NEDIA QUERY 1440px ################################ */
+
+@media only screen and (min-width: 80em) {
+    main {
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        width: 731px;
+        height: 281px;
+        overflow: visible;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* ########################## SECTION 1 ################################ */
+
+    .section1 {
+        width: 286px;
+        margin-bottom: 0px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    .section1__image {
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/drawers.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* ########################## SECTION 2 ################################ */
+    .section2 {
+        width: 445px;
+        flex-grow: 0;
+        padding: 35px 36px 0px;
+    }
+
+    .section2__h1 {
+        font-size: 1.3rem;
+    }
+
+    .section2__parrafo {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        flex-grow: 1;
+        padding-top: 10px;
+    }
+
+    .section2__perfil {
+        align-items: flex-start;
+    }
+
+    .section2__btn {
+        top: 0px;
+        right: 0px;
+    }
+
+    /* ########################## SECTION 3 ################################ */
+    .section3__share {
+        width: 248px;
+        height: 55px;
+        border-radius: 8px;
+        bottom: 20px;
+        left: 550px;
+        opacity: 0;
+    }
+
+    .punta {
+        width: 25px;
+        height: 25px;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-bottom: 20px solid var(--VeryDarkGrayishBlue);
+        position: absolute;
+        bottom: -15px;
+        left: 100px;
+        transform: rotateZ(180deg);
+    }
+
+    .section3__share--parrafo {
+        font-size: 0.8rem;
+    }
+
+    .section3__redes--iconos {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    /* ########################## ANIMATIONS ################################ */
+    @keyframes share-normal {
+        0% {
+            transform: translateY(0px);
+            opacity: 0;
+            scale: 0;
+        }
+        100% {
+            transform: translateY(-80px);
+            opacity: 100;
+            scale: 1;
+        }
+    }
+    @keyframes share-reverse {
+        0% {
+            transform: translateY(-80px);
+            opacity: 100;
+            scale: 1;
+        }
+        100% {
+            transform: translateY(0px);
+            opacity: 0;
+            scale: 0;
+        }
+    }
+}
