@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Webmounster solution URL here](https://github.com/Webmounster/Article-preview-component)
+-   Live Site URL: [Webmounster live site URL here](https://webmounster.github.io/Article-preview-component/)
 
 ## My process
 
